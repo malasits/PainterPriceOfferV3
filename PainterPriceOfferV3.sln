@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36221.1 d17.14
+VisualStudioVersion = 17.14.36221.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -18,6 +18,14 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PainterPriceOfferServcie.Infrastructure", "PainterPriceOfferServcie.Infrastructure\PainterPriceOfferServcie.Infrastructure.csproj", "{76C2AA7D-3916-4F45-B814-1204B2FB6D76}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{81DDED9D-158B-E303-5F62-77A2896D2A5A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{DF728C0C-2158-40FD-8249-346FC55249AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{5C5BC8A8-41D1-466E-A362-5874A82AAE14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PainterPriceOfferServcie", "PainterPriceOfferServcie", "{689F12C9-03A8-4D64-A73B-7A500971651A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PainterPriceOfferService.UnitTest", "Tests\Serives\PainterPriceOfferService\PainterPriceOfferService.UnitTest\PainterPriceOfferService.UnitTest.csproj", "{E55397C0-C0AF-4FFC-972C-E09CDFB2C25F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +57,10 @@ Global
 		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{81DDED9D-158B-E303-5F62-77A2896D2A5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E55397C0-C0AF-4FFC-972C-E09CDFB2C25F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E55397C0-C0AF-4FFC-972C-E09CDFB2C25F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E55397C0-C0AF-4FFC-972C-E09CDFB2C25F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E55397C0-C0AF-4FFC-972C-E09CDFB2C25F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +71,9 @@ Global
 		{17768D6C-EB50-4A1B-905A-4802CE1B9BB5} = {F068AC1E-1461-4309-84B0-7D648266F326}
 		{25426CD5-4B08-4AF5-8EFF-18BE3C7353A1} = {F068AC1E-1461-4309-84B0-7D648266F326}
 		{76C2AA7D-3916-4F45-B814-1204B2FB6D76} = {F068AC1E-1461-4309-84B0-7D648266F326}
+		{5C5BC8A8-41D1-466E-A362-5874A82AAE14} = {DF728C0C-2158-40FD-8249-346FC55249AD}
+		{689F12C9-03A8-4D64-A73B-7A500971651A} = {5C5BC8A8-41D1-466E-A362-5874A82AAE14}
+		{E55397C0-C0AF-4FFC-972C-E09CDFB2C25F} = {689F12C9-03A8-4D64-A73B-7A500971651A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BFB4AFEF-5F94-487D-8EBD-89A3EF436DD5}

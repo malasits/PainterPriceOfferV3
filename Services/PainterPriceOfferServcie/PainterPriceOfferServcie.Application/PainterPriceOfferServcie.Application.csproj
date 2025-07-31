@@ -11,8 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\BaseSettings\Commands\UpdateBaseSetting\" />
-    <Folder Include="Features\BaseSettings\Queries\GetUserSettings\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

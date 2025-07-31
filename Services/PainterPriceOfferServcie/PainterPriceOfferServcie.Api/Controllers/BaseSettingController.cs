@@ -3,6 +3,9 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using PainterPriceOfferServcie.Application.Contracts.Requests.BaseSetting;
 using PainterPriceOfferServcie.Application.Features.BaseSettings.Commands.CreateBaseSetting;
+using PainterPriceOfferServcie.Application.Features.BaseSettings.Commands.UpdateBaseSetting;
+using PainterPriceOfferServcie.Application.Features.BaseSettings.Queries.GetUserSettings;
+using PainterPriceOfferServcie.Application.Features.PriceOffer.Queries.GetPriceOfferById;
 
 namespace PainterPriceOfferServcie.Api.Controllers
 {
@@ -17,12 +20,12 @@ namespace PainterPriceOfferServcie.Api.Controllers
             _mediator = mediator;
         }
 
-        //[HttpGet("GetUserSettings")]
-        //public async Task<IActionResult> GetUserSettings(string userId, CancellationToken cancellationToken)
-        //{
-        //    var result = await _mediator.Send(new GetPriceOfferByIdQuery(id, userId), cancellationToken);
-        //    return Ok(result);
-        //}
+        [HttpGet("GetUserSettings")]
+        public async Task<IActionResult> GetUserSettings(string userId, CancellationToken cancellationToken)
+        {
+            var result = await _mediator.Send(new GetUserSettingsQuery(userId), cancellationToken);
+            return Ok(result);
+        }
 
         [HttpPost("CreateBaseSetting")]
         public async Task<IActionResult> CreateBaseSetting([FromBody] CreateBaseSettingRequest request, CancellationToken cancellationToken)
@@ -31,12 +34,12 @@ namespace PainterPriceOfferServcie.Api.Controllers
             return Ok(result);
         }
 
-        //[HttpPut("UpdateBaseSetting")]
-        //public async Task<IActionResult> UpdateBaseSetting([FromBody] UpdateBaseSettingRequest request, CancellationToken cancellationToken)
-        //{
-        //    var command = request.Adapt<UpdateBaseSettingCommand>();
-        //    await _mediator.Send(command, cancellationToken);
-        //    return Ok();
-        //}
+        [HttpPut("UpdateBaseSetting")]
+        public async Task<IActionResult> UpdateBaseSetting([FromBody] UpdateBaseSettingRequest request, CancellationToken cancellationToken)
+        {
+            var command = request.Adapt<UpdateBaseSettingCommand>();
+            await _mediator.Send(command, cancellationToken);
+            return Ok();
+        }
     }
 }
