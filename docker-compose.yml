@@ -1,0 +1,9 @@
+services:
+  mongodb:
+    image: mongo:6.0
+
+  painterpriceofferservcie.api:
+    image: ${DOCKER_REGISTRY-}painterpriceofferservcieapi
+    build:
+      context: .
+      dockerfile: Services/PainterPriceOfferServcie/PainterPriceOfferServcie.Api/Dockerfile

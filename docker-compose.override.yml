@@ -1,0 +1,22 @@
+services:
+
+  mongodb:
+      container_name: mongodb
+      restart: always
+      ports:
+        - "27017:27017"
+      environment:
+        MONGO_INITDB_ROOT_USERNAME: root
+        MONGO_INITDB_ROOT_PASSWORD: example
+      volumes:
+        - mongodb_data:/data/db
+
+  painterpriceofferservcie.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+    ports:
+      - "8080"
+
+volumes:
+    mongodb_data:

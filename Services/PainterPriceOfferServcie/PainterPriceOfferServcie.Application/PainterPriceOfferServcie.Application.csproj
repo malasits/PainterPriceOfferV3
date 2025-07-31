@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PainterPriceOfferServcie.Domain\PainterPriceOfferServcie.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\BaseSettings\Commands\UpdateBaseSetting\" />
+    <Folder Include="Features\BaseSettings\Queries\GetUserSettings\" />
+  </ItemGroup>
+
+</Project>
